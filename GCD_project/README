@@ -1,0 +1,28 @@
+### Introduction
+
+This is the Class Project for Getting and Cleaning Data from Coursera
+This folder contains three files other than this one
+
+The CodeBook_GCD_Project.Rmd is a mark down file (word) which contains
+a detailed description of the data, what it means and how it was taken 
+and analyzed, as well as how it was processed by the program.
+
+The HARdataSummary.txt file, which is a table with a summary of the data 
+by subject and activity.  
+
+The run_analysis.R file which is the R code which will go out, download
+the data and do all the manipulation to result in the HARdataSummary.txt
+file. 
+
+** How to use these files **
+
+First review CodeBook_GCD_Project which describes the study on which
+the data was made.  This includes how the data was taken and processed,
+and what the different variables mean.
+
+Second if you want to just use the summary data, do it in R using
+the read.table() command.  As a .txt file it is difficult to understand
+
+Third if you want to recreate the HARdataSummary.txt data, or use some
+of the parts of the original data created in makeing that summary, 
+load the R code in run_analysis.R
