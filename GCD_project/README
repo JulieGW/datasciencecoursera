@@ -26,3 +26,26 @@ the read.table() command.  As a .txt file it is difficult to understand
 Third if you want to recreate the HARdataSummary.txt data, or use some
 of the parts of the original data created in makeing that summary, 
 load the R code in run_analysis.R
+
+** How the code works **
+
+The code uses a read.data command in R to retrieve data from 
+http://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+
+The code unzips the file into your working directory.
+
+The data is slit into two "equal" sections, a test and train set for use with
+a supervised learning program.  These two pieces are put back together into one
+training set.  The column headers are replaced and the activity codes are 
+translated back into their meaning (for example "walking" from a number code).
+
+The dataframe is subset to just take columns that have mean or standard deviation
+of other data, so that only these remain in the final analysis. 
+
+The data is joined back with the "answers" of activity and subject to create
+a single data frame.  
+
+The last step is to create a summary table that looks at the mean of each of the 
+data type by the "answer" data - subject and activity. This makes the nicest table
+to just look at.
+
